@@ -47,6 +47,7 @@ class Activity extends Product {
             console.log("TOTAL QUANTITY PRICE -- " + (this.quantitysold * this.price));
         } else {
             console.log("THE ONLY AVAILABLE STOCK WE HAVE IS -- " + this.getstock);
+            console.log("YET TO BE SOLD!! -- "+(this.quantitysold - this.getstock))
             console.log("QUANTITY SOLD -- " + this.getstock);
             console.log("TOTAL QUANTITY PRICE -- " + (this.getstock * this.price));
         }
@@ -64,6 +65,6 @@ class Activity extends Product {
 
     }
 }
-let stock = new Activity(110, "GIFT-BOX", 50, 10, "RAM", 40);
+let stock = new Activity(110, "GIFT-BOX", 50, 10, "RAM", 70);
 stock.display();
 stock.sales();
